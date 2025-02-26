@@ -26,15 +26,15 @@ add.addEventListener("click", () => {
         const newEditingPanelLI = document.createElement("li");
 
         if (fileExtension === "html") {
-            newTabLI.innerHTML = `<i class="fa-brands fa-html5"></i><button id="${fileName}" class="tabButton" onclick="getValue(this)">${fileName}
+            newTabLI.innerHTML = `<button id="${fileName}" class="tabButton" onclick="getValue(this)"><i style="color: red" class="fa-brands fa-html5"></i> ${fileName}
         <button class="tabDeleteButton" onclick="deleteTab(this)"><i class="fa-solid fa-xmark"></i></button>
         </button>`;
         } else if (fileExtension === "css") {
-            newTabLI.innerHTML = `<i class="fa-brands fa-html5"></i><button id="${fileName}" class="tabButton" onclick="getValue(this)">${fileName}
+            newTabLI.innerHTML = `<button id="${fileName}" class="tabButton" onclick="getValue(this)"><i style="color: blue" class="fa-brands fa-css3-alt"></i> ${fileName}
         <button class="tabDeleteButton" onclick="deleteTab(this)"><i class="fa-solid fa-xmark"></i></button>
         </button>`;
         } else if (fileExtension === "js") {
-            newTabLI.innerHTML = `<i class="fa-brands fa-html5"></i><button id="${fileName}" class="tabButton" onclick="getValue(this)">${fileName}
+            newTabLI.innerHTML = `<button id="${fileName}" class="tabButton" onclick="getValue(this)"><i style="color: yellow" class="fa-brands fa-js"></i> ${fileName}
         <button class="tabDeleteButton" onclick="deleteTab(this)"><i class="fa-solid fa-xmark"></i></button>
         </button>`;
         }

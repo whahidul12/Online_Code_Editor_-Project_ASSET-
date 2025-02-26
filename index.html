@@ -12,12 +12,12 @@
             <div class="all-editing-tabs">
                 <div id="tab-Container" class="editing-tabs">
                     <li>
-                        <i style="color: red" class="fa-brands fa-html5"></i>
                         <button
                             class="tabButton"
                             onclick="getValue(this)"
                             id="index.html"
                         >
+                            <i style="color: red" class="fa-brands fa-html5"></i>
                             index.html
                             <button class="tabDeleteButton" onclick="deleteTab(this)">
                                 <i class="fa-solid fa-xmark"></i>
@@ -25,8 +25,8 @@
                         </button>
                     </li>
                     <li>
-                        <i style="color: blue" class="fa-brands fa-css3-alt"></i>
                         <button class="tabButton" onclick="getValue(this)" id="style.css">
+                            <i style="color: blue" class="fa-brands fa-css3-alt"></i>
                             style.css
                             <button class="tabDeleteButton" onclick="deleteTab(this)">
                                 <i class="fa-solid fa-xmark"></i>
@@ -34,8 +34,8 @@
                         </button>
                     </li>
                     <li>
-                        <i style="color: yellow" class="fa-brands fa-js"></i>
                         <button class="tabButton" onclick="getValue(this)" id="script.js">
+                            <i style="color: yellow" class="fa-brands fa-js"></i>
                             script.js
                             <button class="tabDeleteButton" onclick="deleteTab(this)">
                                 <i class="fa-solid fa-xmark"></i>
@@ -49,14 +49,17 @@
             </div>
             <div class="run-and-save-tabs">
                 <div class="save-tab">
-                    <button class="add" id="saveButton">Save</button>
+                    <button id="saveButton">
+                        <i class="fa-solid fa-download"></i> Save
+                    </button>
                 </div>
                 <div class="run-tab">
-                    <button id="add-ta">Output</button>
+                    <button id="outputButton">Output</button>
                 </div>
             </div>
         </div>
         <div class="panel">
+            <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
             <div class="coding-panel">
                 <li>
                     <textarea
