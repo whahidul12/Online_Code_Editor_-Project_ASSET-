@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="control-panel">
+            <div class="all-editing-tabs">
+                <div id="tab-Container" class="editing-tabs">
+                    <li>
+                        <button onclick="getValue(this)" id="index.html">
+                            index.html <button onclick="deleteTab(this)">X</button>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="getValue(this)" id="style.css">
+                            style.css <button onclick="deleteTab(this)">X</button>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="getValue(this)" id="script.js">
+                            script.js <button onclick="deleteTab(this)">X</button>
+                        </button>
+                    </li>
+                </div>
+                <div class="adding-tab">
+                    <button id="add-tab">+</button>
+                </div>
+            </div>
+            <div class="run-and-save-tabs">
+                <div class="save-tab">
+                    <button class="add" id="saveButton">Save</button>
+                </div>
+                <div class="run-tab">
+                    <button id="add-ta">Output</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="coding-panel">
+                <li>
+                    <textarea
+                        class="editing-panel"
+                        id="index.html"
+                        name="index.html"
+                        onkeyup="execute()"
+                        placeholder="Write your index.html file here..."
+                        spellcheck="false"
+                    ></textarea>
+                </li>
+                <li>
+                    <textarea
+                        class="editing-panel"
+                        id="style.css"
+                        name="style.css"
+                        onkeyup="execute()"
+                        placeholder="Write your style.css file here..."
+                        spellcheck="false"
+                    ></textarea>
+                </li>
+                <li>
+                    <textarea
+                        class="editing-panel"
+                        id="script.js"
+                        name="script.js"
+                        onkeyup="execute()"
+                        placeholder="Write your script.js file here..."
+                        spellcheck="false"
+                    ></textarea>
+                </li>
+            </div>
+            <div class="output-panel">
+                <iframe id="output"></iframe>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    </body>
+</html>
