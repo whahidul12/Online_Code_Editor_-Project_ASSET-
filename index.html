@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./font/all.min.css" />
         <title>Document</title>
     </head>
     <body>
@@ -11,23 +12,39 @@
             <div class="all-editing-tabs">
                 <div id="tab-Container" class="editing-tabs">
                     <li>
-                        <button onclick="getValue(this)" id="index.html">
-                            index.html <button onclick="deleteTab(this)">X</button>
+                        <i style="color: red" class="fa-brands fa-html5"></i>
+                        <button
+                            class="tabButton"
+                            onclick="getValue(this)"
+                            id="index.html"
+                        >
+                            index.html
+                            <button class="tabDeleteButton" onclick="deleteTab(this)">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </button>
                     </li>
                     <li>
-                        <button onclick="getValue(this)" id="style.css">
-                            style.css <button onclick="deleteTab(this)">X</button>
+                        <i style="color: blue" class="fa-brands fa-css3-alt"></i>
+                        <button class="tabButton" onclick="getValue(this)" id="style.css">
+                            style.css
+                            <button class="tabDeleteButton" onclick="deleteTab(this)">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </button>
                     </li>
                     <li>
-                        <button onclick="getValue(this)" id="script.js">
-                            script.js <button onclick="deleteTab(this)">X</button>
+                        <i style="color: yellow" class="fa-brands fa-js"></i>
+                        <button class="tabButton" onclick="getValue(this)" id="script.js">
+                            script.js
+                            <button class="tabDeleteButton" onclick="deleteTab(this)">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </button>
                     </li>
                 </div>
                 <div class="adding-tab">
-                    <button id="add-tab">+</button>
+                    <button id="add-tab"><i class="fa-solid fa-plus"></i></button>
                 </div>
             </div>
             <div class="run-and-save-tabs">
@@ -78,6 +95,7 @@
         </div>
 
         <script src="script.js"></script>
+        <script src="./font/all.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     </body>
 </html>

@@ -5,13 +5,28 @@
     font-family: "Poppins", sans-serif;
     list-style: none;
 }
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #313131;
+}
+
+:root {
+    --primery-color: #0e1525;
+    --button-color: rgba(255, 255, 255, 0.07);
+    --tab-delete: rgba(255, 255, 255, 1);
+    --tab-delete-hover: rgba(255, 255, 255, 0.3);
+    --output-run: #009118;
+    --highlight-color: #5bb6bd;
+    --button-outline: #fff;
+}
 /* //////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .control-panel {
     display: flex;
     justify-content: space-between;
-    background-color: #313131;
+    background-color: var(--primery-color);
 }
 .all-editing-tabs {
     display: flex;
@@ -19,12 +34,54 @@
 .editing-tabs {
     display: flex;
 }
-.run-and-save-tabs {
-    display: flex;
+.adding-tab,
+.editing-tabs li {
+    margin-right: 0.5rem;
+    border: 0.01rem solid var(--primery-color);
+    margin: 0.3rem 0.5rem;
 }
-.panel {
+.adding-tab:hover,
+.editing-tabs li:hover {
+    border: 0.01rem solid var(--button-outline);
+}
+.tabButton,
+.tabDeleteButton,
+#add-tab {
+    border: 0.01rem solid var(--button-color);
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    color: var(--button-outline);
+}
+
+.tabButton {
+    padding: 0.3rem;
+    background-color: var(--button-color);
+}
+.editing-tabs li i {
+    background-color: var(--button-color);
+}
+.tabDeleteButton {
+    background-color: var(--button-color);
+    color: var(--tab-delete);
+    padding: 0.3rem;
+}
+.tabDeleteButton:hover {
+    background-color: var(--tab-delete-hover);
+    padding: 0.3rem;
+}
+#add-tab {
+    padding: 0.3rem;
+    background-color: var(--button-color);
+}
+.run-and-save-tabs {
     display: flex;
 }
 /* 
 //////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////// */
+.panel {
+    display: flex;
+}
+.editing-panel {
+}

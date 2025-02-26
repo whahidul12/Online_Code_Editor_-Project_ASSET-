@@ -20,13 +20,25 @@ add.addEventListener("click", () => {
     const fileName = prompt("Please enter a file name:");
 
     const fileExtension = fileName.split(".").pop();
-    console.log(">> " + fileExtension);
 
     if (fileExtension === "html" || fileExtension === "css" || fileExtension === "js") {
         const newTabLI = document.createElement("li");
         const newEditingPanelLI = document.createElement("li");
 
-        newTabLI.innerHTML = `<button id="${fileName}" onclick="getValue(this)">${fileName}<button onclick="deleteTab(this)">X</button></button>`;
+        if (fileExtension === "html") {
+            newTabLI.innerHTML = `<i class="fa-brands fa-html5"></i><button id="${fileName}" class="tabButton" onclick="getValue(this)">${fileName}
+        <button class="tabDeleteButton" onclick="deleteTab(this)"><i class="fa-solid fa-xmark"></i></button>
+        </button>`;
+        } else if (fileExtension === "css") {
+            newTabLI.innerHTML = `<i class="fa-brands fa-html5"></i><button id="${fileName}" class="tabButton" onclick="getValue(this)">${fileName}
+        <button class="tabDeleteButton" onclick="deleteTab(this)"><i class="fa-solid fa-xmark"></i></button>
+        </button>`;
+        } else if (fileExtension === "js") {
+            newTabLI.innerHTML = `<i class="fa-brands fa-html5"></i><button id="${fileName}" class="tabButton" onclick="getValue(this)">${fileName}
+        <button class="tabDeleteButton" onclick="deleteTab(this)"><i class="fa-solid fa-xmark"></i></button>
+        </button>`;
+        }
+
         newEditingPanelLI.innerHTML = `<textarea
                         class="editing-panel"
                         id="${fileName}"
