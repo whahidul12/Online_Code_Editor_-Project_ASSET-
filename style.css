@@ -9,7 +9,6 @@ body {
     height: 100vh;
     width: 100%;
 }
-
 :root {
     --primery-color: #0e1525;
     --button-color: rgba(255, 255, 255, 0.07);
@@ -18,6 +17,7 @@ body {
     --output-run: #009118;
     --highlight-color: #5bb6bd;
     --button-outline: #fff;
+    --coding-panel-bg: #1c2333;
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -79,7 +79,44 @@ body {
 ////////////////////////////////////////////////////////////////////////////////////////////// */
 .panel {
     display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 41px);
 }
+
+.coding-panel {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    border: 0.5rem solid var(--primery-color);
+}
+.editing-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    background-color: var(--coding-panel-bg);
+    color: var(--button-outline);
+    padding: 0.3rem;
+    font-size: 1.2rem;
+}
+.output-panel {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    border: 0.5rem solid var(--primery-color);
+    /* background-color: transparent; */
+}
+#output {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
 .run-tab,
 .save-tab {
     border: 0.01rem solid var(--primery-color);
